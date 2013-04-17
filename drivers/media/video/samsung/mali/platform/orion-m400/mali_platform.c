@@ -60,12 +60,12 @@ static struct clk               *mpll_clock = 0;
 static struct clk               *mali_parent_clock = 0;
 static struct clk               *mali_clock = 0;
 
-int mali_gpu_clk 	=		160;
+int mali_gpu_clk 	=		100;
 static unsigned int GPU_MHZ	=		1000000;
 #ifdef CONFIG_S5PV310_ASV
-int mali_gpu_vol     =               1100000;        /* 1.10V for ASV */
+int mali_gpu_vol     =               900000;        /* 1.10V for ASV */
 #else
-int mali_gpu_vol     =               1100000;        /* 1.10V */
+int mali_gpu_vol     =               900000;        /* 1.10V */
 #endif
 
 #if MALI_DVFS_ENABLED
