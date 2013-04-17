@@ -140,6 +140,10 @@ err:
 	return err_value;
 }
 
+static int u1_adc_temp;
+int u1_adc_temp_getvalue(void) { return u1_adc_temp; }
+EXPORT_SYMBOL(u1_adc_temp_getvalue);
+
 static int convert_adc_to_temper(struct sec_therm_info *info, unsigned int adc)
 {
 	int low = 0;
@@ -162,7 +166,7 @@ static int convert_adc_to_temper(struct sec_therm_info *info, unsigned int adc)
 		else
 			break;
 	}
-	return info->pdata->adc_table[mid].temperature;
+	return u1_adc_temp=info->pdata->adc_table[mid].temperature;
 }
 
 static void notify_change_of_temperature(struct sec_therm_info *info)

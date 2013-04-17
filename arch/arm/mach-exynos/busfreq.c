@@ -47,7 +47,7 @@
 
 #define MAX_LOAD		100
 #define DIVIDING_FACTOR		10000
-#define UP_THRESHOLD_DEFAULT	23
+#define UP_THRESHOLD_DEFAULT	15
 
 #define SYSFS_DEBUG_BUSFREQ
 
@@ -102,11 +102,11 @@ struct busfreq_table {
 };
 
 static struct busfreq_table exynos4_busfreq_table[] = {
-	{LV_0, 400000, 1100000, 0, 0},
-	{LV_1, 267000, 1000000, 0, 0},
+	{LV_0, 400000, 975000, 0, 0},
+	{LV_1, 267000, 925000, 0, 0},
 #ifdef CONFIG_BUSFREQ_L2_160M
 	/*L2: 160MHz */
-	{LV_2, 160000, 1000000, 0, 0},
+	{LV_2, 160000, 900000, 0, 0},
 #else
 	/* L2: 133MHz */
 	{LV_2, 133000, 950000, 0, 0},
