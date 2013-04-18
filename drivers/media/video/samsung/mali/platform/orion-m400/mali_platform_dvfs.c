@@ -65,8 +65,7 @@ typedef struct mali_dvfs_staycount{
 mali_dvfs_staycount_table mali_dvfs_staycount[MALI_DVFS_STEPS]={
 		/*step 0*/{1},
 		/*step 1*/{1},
-		/*step 2*/{1},
-		/*step 3*/{1} };
+		/*step 2*/{1} };
 
 /*dvfs threshold*/
 mali_dvfs_threshold_table mali_dvfs_threshold[MALI_DVFS_STEPS]={
